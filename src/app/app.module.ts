@@ -1,8 +1,14 @@
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ProductService } from './service/product.service';
+import { ProductTestService } from './service/product-test.service';
+
+//Import global tokens
+import { APP_CONFIG, appConfig } from './service/application.token'
 
 
 @NgModule({
@@ -12,7 +18,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [{ provide: ProductService, useClass: ProductTestService },
+  { provide: APP_CONFIG, useValue: appConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
