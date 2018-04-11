@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 8090 --live-reload --open",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "git": "git add . && git commit -a --allow-empty-message -m '' && git push -u origin master"
   },
   "private": true,
   "dependencies": {
