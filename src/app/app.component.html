@@ -24,7 +24,7 @@
   </li>
 </ul>
 <br>
-<h3>Listing of products</h3>
+<!-- <h3>Listing of products</h3>
 <ul>
   <li *ngFor="let product of products">
     {{product.description}}
@@ -35,4 +35,22 @@
   <li *ngFor="let product of tempProducts">
     {{product.description}}
   </li>
-</ul>
+</ul> -->
+
+<h3 #myHeader *ngIf="showHideText;else showAlternateText">Show my Message</h3>
+
+<ng-template #showAlternateText>
+  <h3 style="color:blueviolet">Wow this is way too cool!</h3>
+</ng-template>
+
+<h3>Bill Types using switch</h3>
+<div [ngSwitch]="myBillTypes">
+  <p *ngSwitchCase="BillTypes.Bill">This is a Bill</p>
+  <p *ngSwitchCase="BillTypes.Sub">This is a Sub</p>
+  <p *ngSwitchDefault>Wow not sure what it is</p>
+</div>
+
+
+
+<h3>Sample Button Component</h3>
+<app-button-event [displayText]="btnTitleText" (btnClick)="eventButtonClick($event)" [doubleClick]="doubleClickFlag"></app-button-event>
