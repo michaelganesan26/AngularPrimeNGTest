@@ -50,7 +50,7 @@
   <p *ngSwitchDefault>Wow not sure what it is</p>
 </div>
 
-
+<app-highlighttext [headingText]="headingText" [normalText]="headingTextNormal"></app-highlighttext>
 
 <h3>Sample Button Component</h3>
 <app-button-event [displayText]="btnTitleText" (btnClick)="eventButtonClick($event)" [doubleClick]="doubleClickFlag"></app-button-event>

@@ -10,13 +10,15 @@ import { ProductTestService } from './service/product-test.service';
 
 //Import global tokens
 import { APP_CONFIG, appConfig } from './service/application.token';
-import { ButtonEventComponent } from './controls/button-event/button-event.component'
+import { ButtonEventComponent } from './controls/button-event/button-event.component';
+import { HighlighttextComponent } from './controls/highlighttext/highlighttext.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonEventComponent,
+    HighlighttextComponent,
    ],
   imports: [
     BrowserModule

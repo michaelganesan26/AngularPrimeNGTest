@@ -1,0 +1,16 @@
+.selected{
+   color: blueviolet;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 900;
+   font-style: italic;
+   font-size: 1.04em;
+}
+
+
+.normal{
+    color: yellowgreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:400;
+    font-style: normal;
+    font-size: 1.04em;
+ }

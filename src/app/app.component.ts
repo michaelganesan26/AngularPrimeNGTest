@@ -5,6 +5,7 @@ import { NgIf, NgForOf, NgSwitchCase } from '@angular/common';
 import { IOptionsValues } from 'selenium-webdriver/chrome';
 import { IAppConfig, APP_CONFIG } from './service/application.token';
 
+
 //Import enums
 import { BillTypes } from './service/enum.constants';
 
@@ -26,8 +27,10 @@ export class AppComponent implements OnInit {
   showHideText: boolean = false;
 
   BillTypes = BillTypes; //You have to set this or else enum will not work
-
   myBillTypes: BillTypes = BillTypes.Draft;
+
+  headingText:string = "Welcome To my World of Fun and Games!";
+  headingTextNormal:boolean =true;
 
   constructor(private productService: ProductService, injector: Injector) {
 
