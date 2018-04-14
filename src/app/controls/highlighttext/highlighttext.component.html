@@ -1,3 +1,19 @@
+<div>
 <h3 [ngClass]="{selected:selectedTextFlag,normal:normalSelectedText}" >
    {{headingText}}</h3>
+   <input type="text" [formControl]="name">
+   <input type="text" [formControl]="country">
 
+   <div *ngIf="name.invalid">
+       <p>Sorry your name entry is invalid!</p>
+   </div>
+
+  <input type="text" required 
+   [(ngModel)]="testValue"/>
+   <p>
+       {{testValue}}
+   </p>
+   
+
+
+ 

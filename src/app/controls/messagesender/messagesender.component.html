@@ -1,0 +1,6 @@
+<h3>Message Sender</h3>
+<div>
+  <label for="myMessage">Send a message</label>
+  <input type="text" #myMessage (keyup.enter)="enterKey(myMessage.value)">
+   <button (click)="clearMessages($event)">Clear Messages</button>
+</div>

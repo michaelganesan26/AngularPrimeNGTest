@@ -54,3 +54,14 @@
 
 <h3>Sample Button Component</h3>
 <app-button-event [displayText]="btnTitleText" (btnClick)="eventButtonClick($event)" [doubleClick]="doubleClickFlag"></app-button-event>
+
+<h3>This is a sample of using a child component</h3>
+<app-child-component [message]="'Called by Parent:'" (sponsorData)='getSponsorData($event)'></app-child-component>
+<h3>Messaging Sample Application</h3>
+<div>
+ <app-messagesender></app-messagesender>
+ <app-messagerecipient></app-messagerecipient>
+
+
+
+</div>

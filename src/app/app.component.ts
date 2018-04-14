@@ -1,3 +1,4 @@
+
 import { Observable } from 'rxjs/Observable';
 import { IProduct, ProductService } from './service/product.service';
 import { Component, OnInit, Injector } from '@angular/core';
@@ -8,7 +9,7 @@ import { IAppConfig, APP_CONFIG } from './service/application.token';
 
 //Import enums
 import { BillTypes } from './service/enum.constants';
-
+import { ISponsor } from './controls/child-component/child-component-intefaces';
 
 @Component({
   selector: 'app-root',
@@ -66,6 +67,14 @@ export class AppComponent implements OnInit {
     console.log(`Your button message is: ${event}`);
 
     this.showHideText = !this.showHideText; //flip the show hide text
+
+  }
+
+  getSponsorData(data:ISponsor){
+     
+     console.log(`Your current sponsor is: ${data.name}`);
+
+
 
   }
 
